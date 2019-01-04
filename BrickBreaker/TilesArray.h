@@ -30,11 +30,6 @@ public:
 
 	bool isActiv(int k);
 
-	bool changeVelX();
-	bool changeVelY();
-
-	void reInitBoolVel();
-
 	void initTiles();
 	void reinitTiles();
 
@@ -49,7 +44,4 @@ private:
 
 	int previewColumn;
 	int previewRow;
-
-	bool changeX;
-	bool changeY;
 };
