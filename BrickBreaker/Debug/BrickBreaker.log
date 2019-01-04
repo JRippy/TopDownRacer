@@ -1,5 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (BrickBreaker.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
   Car.cpp
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\car.cpp(172): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\car.cpp(191): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-  BrickBreaker.vcxproj -> C:\Users\utilisateur\Documents\Visual Studio 2017\Project\TopDownRacer\Debug\TopDownRacer.exe
+c:\users\julien\source\repos\topdownracer\brickbreaker\car.cpp(300): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\julien\source\repos\topdownracer\brickbreaker\car.cpp(388): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+c:\users\julien\source\repos\topdownracer\brickbreaker\car.cpp(392): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+  BrickBreaker.vcxproj -> C:\Users\Julien\source\repos\TopDownRacer\Debug\TopDownRacer.exe

@@ -20,5 +20,4 @@ Tile::Tile(int x, int y, int coord, int nmB, int visib)
 	{
 		visible = false;
 	}
-	
 }

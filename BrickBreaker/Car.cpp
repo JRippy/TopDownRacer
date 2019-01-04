@@ -8,6 +8,7 @@ Car::Car() :
 	angle = Pi / 2;
 
 	resetPosition();
+
 }
 
 Car::Car(float x, float y) :
@@ -155,54 +156,43 @@ bool Car::isLoaded()
 void Car::move(float timeStep)
 {
 	float carYMiddle = mPosX + (c.getCarWidth() / 2);
-	float absolutSpeed = fabs(speed);
-
-	if (iskeyUp == true)
+	
+	if (cp.getkeyUp())
 	{
-		//printf("UP2");
-		speed -= 0.1f;
+		if (speed > -0.1)
+		{
+			speed += -0.01f;
+		}
 
+	}
+
+	if (cp.getkeyDown())
+	{
+		if (speed < 0.1)
+		{
+			speed += 0.01f;
+		}
+
+	}
+
+	float absolutSpeed;
+
+	if (speed > 0)
+	{
+		absolutSpeed = speed;
 	}
 	else
 	{
-
-		//Friction
-		if (absolutSpeed >= 0.01f)
-		{
-			speed = speed * 0.99;
-		}
-		else
-		{
-			speed = 0.0f;
-		}
+		absolutSpeed = fabs(speed);
 	}
 
-	if (iskeyDown)
-	{
-		//printf("DOWN2");
-		speed += 0.1f;
-	}
-	else
-	{
-
-		//Friction
-		if (absolutSpeed >= 0.01f)
-		{
-			speed = speed * 0.99;
-		}
-		else
-		{
-			speed = 0.0f;
-		}
-	}
-
-	if (iskeyLeft)
+	if (cp.getkeyLeft())
 	{
 		if (absolutSpeed > 0.05f)
 		{
 			if (angle > 0)
 			{
-				angle -= Pi / 20;
+				angle -= Pi / 2 * timeStep;
 			}
 			else
 			{
@@ -211,13 +201,13 @@ void Car::move(float timeStep)
 		}
 	}
 
-	if (iskeyRight)
+	if (cp.getkeyRight())
 	{
 		if (absolutSpeed > 0.05f)
 		{
 			if (angle < 2 * Pi)
 			{
-				angle += Pi / 20;
+				angle += Pi / 2 * timeStep;
 			}
 			else
 			{
@@ -226,81 +216,21 @@ void Car::move(float timeStep)
 		}
 	}
 
+	if(!cp.getkeyUp() && !cp.getkeyDown())
+	{
 
-	//switch (b.keysym.sym)
-	//{
-	//case SDLK_UP:
-	//	printf("UP");
-
-	//	speed -= 0.1f;
-
-	//	/*if (b.keysym.sym == SDLK_LEFT)
-	//	{
-
-	//		if (angle > 0)
-	//		{
-	//			angle -= Pi / 20;
-	//		}
-	//		else
-	//		{
-	//			angle = 2 * Pi;
-	//		}
-	//	}
-	//	else if (b.keysym.sym == SDLK_RIGHT)
-	//	{
-
-	//		if (angle < 2 * Pi)
-	//		{
-	//			angle += Pi / 20;
-	//		}
-	//		else
-	//		{
-	//			angle = 0;
-	//		}
-
-	//	}*/
-
-	//	break;
-	//case SDLK_DOWN:
-	//	printf("down");
-	//	speed += 0.1f;
-	//	break;
-	//case SDLK_LEFT:
-	//	printf("Left");
-	//	if (absolutSpeed > 0.05f)
-	//	{
-	//		if (angle > 0)
-	//		{
-	//			angle -= Pi / 20;
-	//		}
-	//		else
-	//		{
-	//			angle = 2 * Pi;
-	//		}
-	//	}
-
-	//	break;
-	//case SDLK_RIGHT:
-	//	printf("Right");
-	//	if (absolutSpeed > 0.05f)
-	//	{
-	//		if (angle < 2 * Pi)
-	//		{
-	//			angle += Pi / 20;
-	//		}
-	//		else
-	//		{
-	//			angle = 0;
-	//		}
-	//	}
-
-	//	break;
-	//default:
-	//	break;
-	//}
+		//Friction
+		if (speed >= 0.0001f || speed <= -0.0001f)
+		{
+			speed = speed * 0.99;
+		}
+		else
+		{
+			speed = 0.0f;
+		}
+	}
 
 	//Move the Car left or right
-	//mPosX += mVelX * timeStep;
 	mPosX += cos(angle) * speed;
 	shiftColliders();
 
@@ -309,18 +239,15 @@ void Car::move(float timeStep)
 	{
 		mPosX = c.getScreenWidth() - c.getCarWidth() - 0.2f;
 		shiftColliders();
-		//resetPosition();
 	}
 
 	if (mPosX <= 0)
 	{
 		mPosX = 0.2f;
 		shiftColliders();
-		//resetPosition();
 	}
 
 	//Move the Car up or down
-	//mPosY += mVelY * timeStep;
 	mPosY += sin(angle) * speed;
 	shiftColliders();
 
@@ -362,8 +289,38 @@ void Car::render(SDL_Renderer* gRenderer)
 
 void Car::resetPosition() {
 	//Initialize the position
-	mPosX = (float)c.getScreenWidth() / 2 - (float)c.getCarWidth();
-	mPosY = (float)c.getScreenHeight() / 2 - (float)c.getCarHeight();
+	int i = 0;
+	int * map = c.getTileGrid();
+	
+	int j = 165;
+	//while (i < c.getTileNum() && map[i] != 2)
+	//{
+	//	i++;
+	//}
+
+	//TODO---------------
+	//int j = *((int*)map[i]);
+	//if (map[i] == 2)
+	if (true)
+	{
+		int column = j % 15;
+		float columnWidth = 1 * c.getTileWidth() + c.getTileWidth() / 4;
+
+		int row = j % 20;
+		int row2 = j / 20;
+		float rowHeight = 10 * c.getTileHeight() + 0 * c.getTileHeight() + c.getTileHeight() / 4;
+
+		mPosX = columnWidth;
+		mPosY = rowHeight;
+	}
+	else
+	{
+		mPosX = (float)c.getScreenWidth() / 2 - (float)c.getCarWidth();
+		mPosY = (float)c.getScreenHeight() / 2 - (float)c.getCarHeight();
+	}
+
+
+	shiftColliders();
 }
 
 Circle & Car::getCollider()
@@ -478,28 +435,25 @@ void Car::keyPress(SDL_KeyboardEvent & b)
 		switch (b.keysym.sym)
 		{
 		case SDLK_UP:
-			printf("UP");
 
-			iskeyUp = true;
+			cp.setkeyUp(true);
 
 			break;
 		case SDLK_DOWN:
-			printf("down");
-			iskeyDown = true;
+			
+			cp.setkeyDown(true);
 
 			break;
 		case SDLK_LEFT:
-			printf("Left");
 
-			iskeyLeft = true;
-			iskeyRight = false;
+			cp.setkeyLeft(true);
+			cp.setkeyRight(false);
 
 			break;
 		case SDLK_RIGHT:
-			printf("Right");
 			
-			iskeyRight = true;
-			iskeyLeft = false;
+			cp.setkeyRight(true);
+			cp.setkeyLeft(false);
 
 			break;
 		default:
@@ -511,25 +465,23 @@ void Car::keyPress(SDL_KeyboardEvent & b)
 		switch (b.keysym.sym)
 		{
 		case SDLK_UP:
-			printf("UPUp\n");
 
-			iskeyUp = false;
+			cp.setkeyUp(false);
 
 			break;
 		case SDLK_DOWN:
-			printf("DownUp\n");
-			iskeyDown = false;
+			
+			cp.setkeyDown(false);
+
 			break;
 		case SDLK_LEFT:
-			printf("LeftUp\n");
 
-			iskeyLeft = false;
+			cp.setkeyLeft(false);
 
 			break;
 		case SDLK_RIGHT:
-			printf("RightUp\n");
 
-			iskeyRight = false;
+			cp.setkeyRight(false);
 
 			break;
 		default:
@@ -540,7 +492,6 @@ void Car::keyPress(SDL_KeyboardEvent & b)
 		break;
 	}
 
-	printf("\nSpeed : %f, Angle : %f\n", speed, angle);
 }
 
 void Car::free()

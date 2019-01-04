@@ -1,6 +1,7 @@
 #include "Timer.h"
 #include "Config.h"
 #include "Texture.h"
+#include "ControlPlayer.h"
 #include <SDL.h>
 #include <math.h>
 
@@ -89,11 +90,8 @@ private:
 	//Moves the collision circle relative to the Car's offset
 	void shiftColliders();
 
-	//Key State
-	bool iskeyUp = false;
-	bool iskeyDown = false;
-	bool iskeyLeft = false;
-	bool iskeyRight = false;
+	//Control player
+	ControlPlayer cp;
 
 };
 
