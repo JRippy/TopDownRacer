@@ -40,6 +40,7 @@ public:
 	//Moves the car and checks collision
 	//void move(float timeStep, SDL_Rect& square);
 	void move(float timeStep);
+	void isCollided(bool b);
 
 	void changeDirectionX();
 	void changeDirectionY();
@@ -94,4 +95,3 @@ private:
 	ControlPlayer cp;
 
 };
-

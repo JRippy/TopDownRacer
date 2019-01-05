@@ -265,6 +265,14 @@ void Car::move(float timeStep)
 	}
 }
 
+void Car::isCollided(bool b)
+{
+	if (b)
+	{
+		speed += -speed * 0.5;
+	}
+}
+
 void Car::changeDirectionX()
 {
 	mVelX = -mVelX;

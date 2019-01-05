@@ -1,28 +1,29 @@
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.pch
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\vc141.pdb
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\vc141.idb
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\pch.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\timer.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\texture.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\racket.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\game.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\car.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\config.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\tilesarray.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\tile.obj
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\debug\topdownracer.exe
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\debug\topdownracer.ilk
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\debug\topdownracer.pdb
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.res
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\config.new.obj.enc
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\tilesarray.obj.enc
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\cl.command.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\cl.read.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\cl.write.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\link.command.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\link.read.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\link.write.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\rc.command.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\rc.read.1.tlog
-c:\users\utilisateur\documents\visual studio 2017\project\topdownracer\brickbreaker\debug\topdownracer.tlog\rc.write.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.pch
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\vc141.pdb
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\vc141.idb
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\pch.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\timer.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\texture.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\racket.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\config.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\tile.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\controlplayer.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\collisions.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\tilesarray.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\game.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\car.obj
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\resourcemanager.obj
+c:\users\julien\source\repos\topdownracer\debug\topdownracer.exe
+c:\users\julien\source\repos\topdownracer\debug\topdownracer.ilk
+c:\users\julien\source\repos\topdownracer\debug\topdownracer.pdb
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.res
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\cl.command.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\cl.read.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\cl.write.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\link.command.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\link.read.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\link.write.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\rc.command.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\rc.read.1.tlog
+c:\users\julien\source\repos\topdownracer\brickbreaker\debug\topdownracer.tlog\rc.write.1.tlog

@@ -48,7 +48,10 @@
     <ClInclude Include="ControlPlayer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="Collisions.h">
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TopDownRacer\resource.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -86,12 +89,21 @@
     <ClCompile Include="ControlPlayer.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Collisions.cpp">
+    <ClCompile Include="ResourceManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="dot.bmp">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="pixelart-cars.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Road.png">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+    <Image Include="Rock.png">
       <Filter>Fichiers de ressources</Filter>
     </Image>
   </ItemGroup>

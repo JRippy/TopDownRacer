@@ -155,8 +155,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Collisions.h" />
+    <ClInclude Include="..\TopDownRacer\resource.h" />
     <ClInclude Include="ControlPlayer.h" />
+    <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TilesArray.h" />
     <ClInclude Include="Config.h" />
@@ -169,8 +170,8 @@
     <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="ControlPlayer.cpp" />
+    <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="TopDownRacer.cpp" />
     <ClCompile Include="TilesArray.cpp" />
@@ -192,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="dot.bmp" />
+    <Image Include="pixelart-cars.png" />
+    <Image Include="Road.png" />
+    <Image Include="Rock.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="lazy.ttf" />

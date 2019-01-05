@@ -55,70 +55,45 @@ void TilesArray::render(SDL_Renderer * gRenderer)
 	}
 }
 
-//bool TilesArray::isCollide(Circle& circle)
-//{
-//	if (circle.y < (c.getScreenHeight() / 2 - 20))
-//	{
-//
-//		int dotTilex = circle.x / c.getTileWidth();
-//		int dotTiley = circle.y / c.getTileHeight();
-//
-//		int numB = dotTilex + 10 * dotTiley;
-//
-//
-//		//Test Collide with refact----------------------------------
-//		SDL_Rect test;
-//
-//		test.x = dotTilex * 80;
-//		test.y = dotTiley * 20;
-//		test.w = c.getTileWidth() - 2;
-//		test.h = c.getTileHeight() - 2;
-//
-//		//printf("Bool collide %d/n", isCollideBrick(circle, test));
-//		//-------------------------------------------------------------
-//
-//		if (numB < c.getTileNum())
-//		{
-//			if (isActiv(numB) && isCollideTile(circle, test))
-//			{
-//
-//				if (previewColumn == dotTilex)
-//				{
-//					if (previewRow != dotTiley)
-//					{
-//						changeY = true;
-//					}
-//				}
-//				else
-//				{
-//					if (previewRow == dotTiley)
-//					{
-//						changeX = true;
-//					}
-//					else
-//					{
-//						changeY = true;
-//						changeX = true;
-//					}
-//				}
-//
-//				desactivateTile(numB);
-//			}
-//
-//			previewColumn = dotTilex;
-//			previewRow = dotTiley;
-//
-//			return true;
-//		}
-//
-//		previewColumn = dotTilex;
-//		previewRow = dotTiley;
-//
-//		return false;
-//	}
-//
-//	return false;
-//}
+bool TilesArray::isCollide(Circle& circle)
+{
+	if (circle.y < (c.getScreenHeight() - c.getTileHeight()) && circle.y > 0 && circle.x < (c.getScreenWidth() - c.getTileWidth()) && circle.x > 0)
+	{
+
+		int dotTilex = circle.x / c.getTileWidth();
+		int dotTiley = circle.y / c.getTileHeight();
+
+		int numB = dotTilex + c.getTileNumColumn() * dotTiley;
+
+		//Collide with Tile storing the dot
+		SDL_Rect tile;
+
+		tile.x = dotTilex * c.getTileWidth();
+		tile.y = dotTiley * c.getTileHeight();
+		tile.w = c.getTileWidth() - 2;
+		tile.h = c.getTileHeight() - 2;
+
+		if (numB < c.getTileNum())
+		{
+			if (isActiv(numB) && isCollideTile(circle, tile))
+			{
+				return true;
+			}
+
+			//previewColumn = dotTilex;
+			//previewRow = dotTiley;
+
+			return false;
+		}
+
+		//previewColumn = dotTilex;
+		//previewRow = dotTiley;
+
+		return false;
+	}
+
+	return false;
+}
 
 bool TilesArray::isCollideTile(Circle& a, SDL_Rect& b)
 {

@@ -18,6 +18,7 @@ public:
 	static int getTileHeight();
 	static int getTileWidth();
 	static int getTileNum();
+	static int getTileNumColumn();
 	static int * getTileGrid();
 
 private:
@@ -44,6 +45,7 @@ private:
 	static const int TILE_WIDTH = 40;
 	static const int TILE_HEIGHT = 40;
 	static const int TILE_NUM = 300;
+	static const int TILE_NUMCOLUMN = 20;
 
 };
 

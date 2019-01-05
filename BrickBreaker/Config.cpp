@@ -63,6 +63,11 @@ int Config::getTileNum()
 	return TILE_NUM;
 }
 
+int Config::getTileNumColumn()
+{
+	return TILE_NUMCOLUMN;
+}
+
 int * Config::getTileGrid()
 {
 	static int tileGrid[] =

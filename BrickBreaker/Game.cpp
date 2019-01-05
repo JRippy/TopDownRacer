@@ -80,6 +80,7 @@ void Game::update()
 	//Move for time step
 	//car.move(timeStep, wall);
 	car.move(timeStep);
+	car.isCollided(tilesA.isCollide(car.getCollider()));
 
 	//if (tilesA.isCollide(car.getCollider()))
 	////if (car.checkCollision(car.getCollider(), wall))
