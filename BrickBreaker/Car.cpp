@@ -286,10 +286,10 @@ void Car::changeDirectionY()
 void Car::render(SDL_Renderer* gRenderer)
 {
 	//Load Car texture
-	if (!gCarTexture.loadFromFile("dot.bmp", gRenderer))
-	{
-		printf("Failed to load dot texture!\n");
-	}
+	//if (!gCarTexture.loadFromFile("dot.bmp", gRenderer))
+	//{
+	//	printf("Failed to load dot texture!\n");
+	//}
 
 	//Show the Car
 	gCarTexture.render((int)mPosX, (int)mPosY, gRenderer);
@@ -329,6 +329,8 @@ void Car::resetPosition() {
 
 
 	shiftColliders();
+
+	printf("Reset Position 1 : %f %f %d\n", mPosX, mPosY, j);
 }
 
 Circle & Car::getCollider()

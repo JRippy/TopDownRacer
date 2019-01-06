@@ -28,6 +28,8 @@ bool Game::load(SDL_Renderer* gRenderer)
 	car = Car(gRenderer);
 	car.loadMediaCar(gRenderer);
 
+	car2 = CarPlayer2(gRenderer);
+	car2.loadMediaCar(gRenderer);
 
 	//return car.isLoaded(); //loadMediacar(gRenderer);
 	return true;
@@ -59,6 +61,7 @@ bool Game::input(SDL_Renderer* gRenderer, bool quit)
 
 			//Debug
 			car.handleEvent(e, timeStep);
+			car2.handleEvent(e, timeStep);
 
 		}
 	}
@@ -67,42 +70,15 @@ bool Game::input(SDL_Renderer* gRenderer, bool quit)
 
 void Game::update()
 {
-	//Set the wall
-	//SDL_Rect wall;
-	//wall.x = racket.getRPosX();;
-	//wall.y = racket.getRPosY();;
-	//wall.w = c.getRacketWidth();
-	//wall.h = c.getRacketHeight();
 
 	//Calculate time step
 	timeStep = stepTimer.getTicks() / 1000.f;
 
 	//Move for time step
-	//car.move(timeStep, wall);
 	car.move(timeStep);
 	car.isCollided(tilesA.isCollide(car.getCollider()));
-
-	//if (tilesA.isCollide(car.getCollider()))
-	////if (car.checkCollision(car.getCollider(), wall))
-	//{
-	//	if (tilesA.changeVelY()) {
-
-	//		if (tilesA.changeVelX()) {
-	//			car.changeDirectionX();
-	//		}			
-	//		
-	//		car.changeDirectionY();
-	//		tilesA.reInitBoolVel();
-	//	}
-	//	else
-	//	{
-	//		if (tilesA.changeVelX()) {
-	//			car.changeDirectionX();
-	//			tilesA.reInitBoolVel();
-	//		}
-	//	}
-
-	//}
+	car2.move(timeStep);
+	car2.isCollided(tilesA.isCollide(car2.getCollider()));
 
 	//Restart step timer
 	stepTimer.start();
@@ -111,6 +87,7 @@ void Game::update()
 void Game::draw(SDL_Renderer* gRenderer)
 {
 	car.render(gRenderer);
+	car2.render(gRenderer);
 	tilesA.render(gRenderer);
 }
 
@@ -130,6 +107,7 @@ void Game::free()
 {
 	//Free loaded images
 	car.free();
+	car2.free();
 	tilesA.free();
 }
 

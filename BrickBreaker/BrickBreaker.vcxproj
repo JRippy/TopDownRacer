@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\TopDownRacer\resource.h" />
+    <ClInclude Include="CarPlayer2.h" />
     <ClInclude Include="ControlPlayer.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Tile.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Timer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CarPlayer2.cpp" />
     <ClCompile Include="ControlPlayer.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Tile.cpp" />

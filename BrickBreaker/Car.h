@@ -59,22 +59,14 @@ public:
 
 	double distanceSquared(int x1, int y1, int x2, int y2);
 
-	//Debug
+	//Controls
 	void handleEvent(SDL_Event& e, float timeStep);
 	void mousePress(SDL_MouseButtonEvent& b);
 	void keyPress(SDL_KeyboardEvent& b);
 
 	void free();
 
-private:
-	bool Loaded;
-
-	//The X and Y offsets of the Car
-	float mPosX, mPosY;
-
-	//The velocity of the Car
-	float mVelX, mVelY;
-
+protected:
 	//The car angle
 	float Pi = 3.141592654f;;
 	float angle;
@@ -93,5 +85,14 @@ private:
 
 	//Control player
 	ControlPlayer cp;
+
+private:
+	bool Loaded;
+
+	//The X and Y offsets of the Car
+	float mPosX, mPosY;
+
+	//The velocity of the Car
+	float mVelX, mVelY;
 
 };

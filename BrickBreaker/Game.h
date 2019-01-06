@@ -3,6 +3,7 @@
 #include "Config.h"
 #include "TilesArray.h"
 #include "Car.h"
+#include "CarPlayer2.h"
 
 #include <string>
 #include <SDL.h>
@@ -48,6 +49,7 @@ private:
 
 	//The dot that will be moving around on the screen
 	Car car;
+	CarPlayer2 car2;
 
 };
 
