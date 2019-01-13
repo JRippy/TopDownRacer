@@ -1,9 +1,24 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (BrickBreaker.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
+  pch.cpp
   CarPlayer2.cpp
-c:\users\julien\source\repos\topdownracer\brickbreaker\carplayer2.cpp(158): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
-c:\users\julien\source\repos\topdownracer\brickbreaker\carplayer2.cpp(218): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-c:\users\julien\source\repos\topdownracer\brickbreaker\carplayer2.cpp(222): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-  Game.cpp
+c:\users\etudiant\documents\c++\topdownracer\brickbreaker\carplayer2.cpp(158): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\etudiant\documents\c++\topdownracer\brickbreaker\carplayer2.cpp(218): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+c:\users\etudiant\documents\c++\topdownracer\brickbreaker\carplayer2.cpp(222): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+  ControlPlayer.cpp
+  ResourceManager.cpp
+  Tile.cpp
   TopDownRacer.cpp
+  TilesArray.cpp
+  Config.cpp
+  Car.cpp
+c:\users\etudiant\documents\c++\topdownracer\brickbreaker\car.cpp(225): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\etudiant\documents\c++\topdownracer\brickbreaker\car.cpp(272): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+c:\users\etudiant\documents\c++\topdownracer\brickbreaker\car.cpp(315): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+c:\users\etudiant\documents\c++\topdownracer\brickbreaker\car.cpp(319): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+  Game.cpp
+  Racket.cpp
+  Texture.cpp
+  Timer.cpp
   Génération de code en cours...
-  BrickBreaker.vcxproj -> C:\Users\Julien\source\repos\TopDownRacer\Debug\TopDownRacer.exe
+  LINK : C:\Users\etudiant\Documents\C++\TopDownRacer\Debug\TopDownRacer.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  BrickBreaker.vcxproj -> C:\Users\etudiant\Documents\C++\TopDownRacer\Debug\TopDownRacer.exe
